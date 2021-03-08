@@ -1,0 +1,3 @@
+include ':shadilibrary'
+include ':app'
+rootProject.name = "ShadiAppGenerator"
