@@ -11,6 +11,7 @@ import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 import retrofit2.http.Field;
 import retrofit2.http.FormUrlEncoded;
+import retrofit2.http.GET;
 import retrofit2.http.POST;
 
 public class WebService {
@@ -42,26 +43,67 @@ public class WebService {
 
         //register_one.php
 
-        @POST
+        @POST("register_one.php")
         @FormUrlEncoded
         Call<Ragister_one> ragistert1(
+
                 @Field("name") String name,
                 @Field("mobile") String mobile,
                 @Field("gender") String gender,
                 @Field("email") String email,
                 @Field("looking") String looking,
+                @Field("country") String country,
+                @Field("dob") String dob,
                 @Field("password") String password
         );
 
-        @POST
+        @POST("register_two.php")
         @FormUrlEncoded
         Call<Ragister_two> ragistert2(
-                @Field("cast") String cast,
                 @Field("mobile") String mobile,
+                @Field("cast") String cast,
                 @Field("subcast") String subcast,
                 @Field("education") String education,
-                @Field("eduother") String eduother,
-                @Field("password") String password
+                @Field("eduother") String eduother
         );
+
+        //mstatus:single
+        //height:5 feet 2 inch
+        //weight:45
+        //living:india
+        //birth:rajkot
+        //nationality:indian
+        //mobile:1111111111111
+
+        @POST("register_three.php")
+        @FormUrlEncoded
+        Call<Ragister_three> ragistert3(
+                @Field("mobile") String mobile,
+                @Field("height") String height,
+                @Field("weight") String weight,
+                @Field("living") String living,
+                @Field("birth") String birth,
+                @Field("nationality") String nationality
+        );
+
+        //register_four.php
+        @POST("register_four.php")
+        @FormUrlEncoded
+        Call<Ragister_four> ragistert4(
+
+                @Field("mobile") String mobile,
+                @Field("profession") String profession,
+                @Field("income") String income,
+                @Field("state") String state,
+                @Field("city") String city,
+                @Field("lfamily") String lfamily,
+                @Field("btype") String btype,
+                @Field("fstatus") String fstatus,
+                @Field("complexion") String complexion,
+                @Field("diet") String diet
+        );
+
+        @GET("country.php")
+        Call<country> country();
     }
 }
