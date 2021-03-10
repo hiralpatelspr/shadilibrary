@@ -11,7 +11,6 @@ import retrofit2.Response;
 public class CountryApi {
 
     public static void contry(Context context, final List<String> countries){
-
         WebService.getClient().country().enqueue(new Callback<country>() {
             @Override
             public void onResponse(Call<country> call, Response<country> response) {
