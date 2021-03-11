@@ -118,6 +118,14 @@ public class WebService {
                 @Field("eid") String eid
         );
 
+        //sub_religion.php
+
+        @POST("sub_religion.php")
+        @FormUrlEncoded
+        Call<Sub_Religion> subreligion(
+
+                @Field("rid") String rid
+        );
         @GET("country.php")
         Call<country> country();
 

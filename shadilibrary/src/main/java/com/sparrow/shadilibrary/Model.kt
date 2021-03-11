@@ -84,3 +84,16 @@ data class subedu(
     val religion_id: String,
     val sub_reg_name: String
 )
+
+
+
+data class Sub_Religion(
+    val detail: List<subrel>
+)
+
+data class subrel(
+    val id: String,
+    val religion_id: String,
+    val religion_name: String,
+    val sub_reg_name: String
+)

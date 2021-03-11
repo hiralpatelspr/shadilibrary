@@ -10,13 +10,13 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class SubEducation {
+public class SubReligion {
 
-    public static void subeducations(final Context context, final List<String> state, final Spinner spinner, String eid){
+    public static void subreligions(final Context context, final List<String> state, final Spinner spinner, String rid){
 
-        WebService.getClient().subeducation(eid).enqueue(new Callback<Sub_education>() {
+        WebService.getClient().subreligion(rid).enqueue(new Callback<Sub_Religion>() {
             @Override
-            public void onResponse(Call<Sub_education> call, Response<Sub_education> response) {
+            public void onResponse(Call<Sub_Religion> call, Response<Sub_Religion> response) {
                 for(int i = 0;i< response.body().getDetail().size();i++){
                     state.add(response.body().getDetail().get(i).getSub_reg_name());
                 }
@@ -28,7 +28,7 @@ public class SubEducation {
             }
 
             @Override
-            public void onFailure(Call<Sub_education> call, Throwable t) {
+            public void onFailure(Call<Sub_Religion> call, Throwable t) {
 
             }
         });
