@@ -29,11 +29,13 @@ public class WebService {
                     .readTimeout(100, TimeUnit.SECONDS)
                     .writeTimeout(100, TimeUnit.SECONDS)
                     .build();
+
             Retrofit client = new Retrofit.Builder()
                     .baseUrl("http://gohelvijay47932685.ipage.com/mrg_lib/")
                     .client(okclient)
                     .addConverterFactory(GsonConverterFactory.create(new Gson()))
                     .build();
+
             webApiInterface = client.create(WebServiceInterface.class);
         }
         return webApiInterface;
