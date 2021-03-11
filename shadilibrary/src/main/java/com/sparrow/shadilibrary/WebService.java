@@ -103,7 +103,27 @@ public class WebService {
                 @Field("diet") String diet
         );
 
+        @POST("states.php")
+        @FormUrlEncoded
+        Call<States> states(
+
+                @Field("sid") String sid
+        );
+        @POST("cities.php")
+        @FormUrlEncoded
+        Call<Cities> cities(
+
+                @Field("cid") String cid
+        );
+
         @GET("country.php")
         Call<country> country();
+
+        @GET("education.php")
+        Call<Education> education();
+
+        @GET("religion.php")
+        Call<Religions> religion();
+
     }
 }
