@@ -67,13 +67,6 @@ public class WebService {
                 @Field("eduother") String eduother
         );
 
-        //mstatus:single
-        //height:5 feet 2 inch
-        //weight:45
-        //living:india
-        //birth:rajkot
-        //nationality:indian
-        //mobile:1111111111111
 
         @POST("register_three.php")
         @FormUrlEncoded
@@ -109,11 +102,20 @@ public class WebService {
 
                 @Field("sid") String sid
         );
+
+
         @POST("cities.php")
         @FormUrlEncoded
         Call<Cities> cities(
 
                 @Field("cid") String cid
+        );
+
+        @POST("sub_education.php")
+        @FormUrlEncoded
+        Call<Sub_education> subeducation(
+
+                @Field("eid") String eid
         );
 
         @GET("country.php")

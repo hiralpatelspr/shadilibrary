@@ -72,3 +72,15 @@ data class rel(
     val id: String,
     val name: String
 )
+
+
+data class Sub_education(
+    val detail: List<subedu>
+)
+
+data class subedu(
+    val educations_name: String,
+    val id: String,
+    val religion_id: String,
+    val sub_reg_name: String
+)
