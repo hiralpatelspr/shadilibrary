@@ -74,6 +74,7 @@ public class WebService {
         @FormUrlEncoded
         Call<Ragister_three> ragistert3(
                 @Field("mobile") String mobile,
+                @Field("mStatus") String mStatus,
                 @Field("height") String height,
                 @Field("weight") String weight,
                 @Field("living") String living,
