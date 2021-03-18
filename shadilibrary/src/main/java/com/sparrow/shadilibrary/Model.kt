@@ -11,13 +11,14 @@ data class Ragister_two(
     val success: Boolean
 )
 
-data class Ragister_three(
+data class Registe_three(
     val message: String,
     val success: Boolean
 )
 
-data class Ragister_four(
-    val msg: String,
+
+data class Register_four(
+    val message: String,
     val success: Boolean
 )
 

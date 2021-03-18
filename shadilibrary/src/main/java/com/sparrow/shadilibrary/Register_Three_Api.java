@@ -14,15 +14,15 @@ public class Register_Three_Api {
     public static void registerThreeApi(final Context context,String mStatus, String mobile, String height,String weight,
                                         String living,String birth,String nationality){
 
-        WebService.getClient().ragistert3(mobile, mStatus, height, weight, living, birth, nationality).enqueue(new Callback<Ragister_three>() {
+        WebService.getClient().ragistert3(mobile, mStatus, height, weight, living, birth, nationality).enqueue(new Callback<Registe_three>() {
             @Override
-            public void onResponse(@NotNull Call<Ragister_three> call, @NotNull Response<Ragister_three> response) {
+            public void onResponse(@NotNull Call<Registe_three> call, @NotNull Response<Registe_three> response) {
                 assert response.body() != null;
                 Toast.makeText(context, ""+response.body().getMessage(), Toast.LENGTH_SHORT).show();
             }
 
             @Override
-            public void onFailure(@NotNull Call<Ragister_three> call, @NotNull Throwable t) {
+            public void onFailure(@NotNull Call<Registe_three> call, @NotNull Throwable t) {
 
             }
         });

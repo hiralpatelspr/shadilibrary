@@ -72,9 +72,9 @@ public class WebService {
 
         @POST("register_three.php")
         @FormUrlEncoded
-        Call<Ragister_three> ragistert3(
+        Call<Registe_three> ragistert3(
                 @Field("mobile") String mobile,
-                @Field("mStatus") String mStatus,
+                @Field("mstatus") String mstatus,
                 @Field("height") String height,
                 @Field("weight") String weight,
                 @Field("living") String living,
@@ -85,7 +85,7 @@ public class WebService {
         //register_four.php
         @POST("register_four.php")
         @FormUrlEncoded
-        Call<Ragister_four> ragistert4(
+        Call<Register_four> ragistert4(
 
                 @Field("mobile") String mobile,
                 @Field("profession") String profession,
