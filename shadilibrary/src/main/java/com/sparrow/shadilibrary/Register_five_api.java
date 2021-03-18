@@ -16,7 +16,6 @@ public class Register_five_api {
                                         String mreligion, String meducation, String mcountry, String lookingfor,
                                         String mdiet, String detailbio, String likeactivite){
 
-
         WebService.getClient().ragistert5(mobile,mstatus,mreligion,meducation,mcountry,lookingfor,mdiet,detailbio,likeactivite).enqueue(new Callback<Register_five>() {
             @Override
             public void onResponse(@NotNull Call<Register_five> call, @NotNull Response<Register_five> response) {
