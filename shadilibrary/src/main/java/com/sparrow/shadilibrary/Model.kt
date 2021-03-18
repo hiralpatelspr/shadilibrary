@@ -98,3 +98,16 @@ data class subrel(
     val religion_name: String,
     val sub_reg_name: String
 )
+
+
+
+data class Register_five(
+    val Message: String
+)
+
+
+
+data class Login(
+    val msg: String,
+    val success: Boolean
+)

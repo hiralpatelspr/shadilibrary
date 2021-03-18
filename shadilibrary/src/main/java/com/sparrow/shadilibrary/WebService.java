@@ -99,6 +99,20 @@ public class WebService {
                 @Field("diet") String diet
         );
 
+        @POST("register_five.php")
+        @FormUrlEncoded
+        Call<Register_five> ragistert5(
+
+                @Field("mobile") String mobile,
+                @Field("mstatus") String mstatus,
+                @Field("mreligion") String mreligion,
+                @Field("meducation") String meducation,
+                @Field("mcountry") String mcountry,
+                @Field("lookingfor") String lookingfor,
+                @Field("mdiet") String mdiet,
+                @Field("detailbio") String detailbio,
+                @Field("likeactivite") String likeactivite
+        );
         @POST("states.php")
         @FormUrlEncoded
         Call<States> states(
@@ -137,6 +151,13 @@ public class WebService {
 
         @GET("religion.php")
         Call<Religions> religion();
+//login.php
+@POST("login.php")
+@FormUrlEncoded
+Call<Login> login(
 
+        @Field("mobile") String mobile,
+        @Field("password") String password
+);
     }
 }
