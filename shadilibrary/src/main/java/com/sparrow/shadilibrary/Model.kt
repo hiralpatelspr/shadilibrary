@@ -112,13 +112,11 @@ data class Login(
     val success: Boolean
 )
 
-
-
 data class MatchArray(
-    val detail: List<match>
+    val detail: List<MatchList>
 )
 
-data class match(
+data class MatchList(
     val detail_bio: String,
     val gender: String,
     val id: String,
