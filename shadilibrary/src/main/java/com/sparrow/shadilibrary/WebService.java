@@ -159,5 +159,13 @@ Call<Login> login(
         @Field("mobile") String mobile,
         @Field("password") String password
 );
+//match.php
+@POST("match.php")
+@FormUrlEncoded
+Call<MatchArray> matcharray(
+
+        @Field("mobile_no") String mobile
+
+);
     }
 }
