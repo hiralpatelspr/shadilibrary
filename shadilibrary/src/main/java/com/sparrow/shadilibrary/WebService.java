@@ -1,6 +1,7 @@
 package com.sparrow.shadilibrary;
 
 import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 
 import java.util.concurrent.TimeUnit;
 
@@ -29,11 +30,13 @@ public class WebService {
                     .readTimeout(100, TimeUnit.SECONDS)
                     .writeTimeout(100, TimeUnit.SECONDS)
                     .build();
-
+            Gson gson = new GsonBuilder()
+                    .setLenient()
+                    .create();
             Retrofit client = new Retrofit.Builder()
                     .baseUrl("http://gohelvijay47932685.ipage.com/mrg_lib/")
                     .client(okclient)
-                    .addConverterFactory(GsonConverterFactory.create(new Gson()))
+                    .addConverterFactory(GsonConverterFactory.create(gson))
                     .build();
 
             webApiInterface = client.create(WebServiceInterface.class);
