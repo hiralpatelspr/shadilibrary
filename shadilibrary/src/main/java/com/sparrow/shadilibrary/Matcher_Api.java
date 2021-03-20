@@ -1,6 +1,7 @@
 package com.sparrow.shadilibrary;
 
 import android.content.Context;
+import android.util.Log;
 
 import java.util.List;
 
@@ -10,13 +11,13 @@ import retrofit2.Response;
 
 public class Matcher_Api {
 
-    public static void match(final Context context, String mobile, final List<MatchList> matchList){
+    public static void match(final Context context, String mobile, final List<matcharray> matchList){
 
         WebService.getClient().matcharray(mobile).enqueue(new Callback<MatchArray>() {
             @Override
             public void onResponse(Call<MatchArray> call, Response<MatchArray> response) {
                 for (int i = 0; i<response.body().getDetail().size();i++){
-                    MatchList matchlist_array = new MatchList(response.body().getDetail().get(i).getDetail_bio(),
+                    matcharray matchlist_array = new matcharray(response.body().getDetail().get(i).getDetail_bio(),
                             response.body().getDetail().get(i).getGender(),
                             response.body().getDetail().get(i).getId(),
                             response.body().getDetail().get(i).getLike_activite(),
@@ -26,6 +27,8 @@ public class Matcher_Api {
                             response.body().getDetail().get(i).getMeducation(),
                             response.body().getDetail().get(i).getName());
                     matchList.add(matchlist_array);
+
+                    Log.d("TAG", "onResponse: "+matchList);
                 }
 
 
