@@ -28,7 +28,8 @@ public class Matcher_Api {
                             response.body().getDetail().get(i).getMcountry(),
                             response.body().getDetail().get(i).getMdiet(),
                             response.body().getDetail().get(i).getMeducation(),
-                            response.body().getDetail().get(i).getName());
+                            response.body().getDetail().get(i).getName(),
+                            response.body().getDetail().get(i).getPro_img());
                     matchList.add(matchlist_array);
 
                     Log.d("TAG", "onResponse: "+matchList);

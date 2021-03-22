@@ -114,6 +114,7 @@ data class Login(
 
 data class MatchArray(
     val detail: List<match_array>
+
 )
 
 data class match_array(
@@ -125,7 +126,8 @@ data class match_array(
     val mcountry: String,
     val mdiet: String,
     val meducation: String,
-    val name: String
+    val name: String,
+    val pro_img: String
 )
 
 

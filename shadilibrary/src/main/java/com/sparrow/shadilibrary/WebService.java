@@ -116,6 +116,7 @@ public class WebService {
                 @Field("detailbio") String detailbio,
                 @Field("likeactivite") String likeactivite
         );
+
         @POST("states.php")
         @FormUrlEncoded
         Call<States> states(
@@ -146,6 +147,7 @@ public class WebService {
 
                 @Field("rid") String rid
         );
+
         @GET("country.php")
         Call<country> country();
 
@@ -154,21 +156,23 @@ public class WebService {
 
         @GET("religion.php")
         Call<Religions> religion();
-//login.php
-@POST("login.php")
-@FormUrlEncoded
-Call<Login> login(
 
-        @Field("mobile") String mobile,
-        @Field("password") String password
-);
-//match.php
-@POST("match.php")
-@FormUrlEncoded
-Call<MatchArray> matcharray(
+        //login.php
+        @POST("login.php")
+        @FormUrlEncoded
+        Call<Login> login(
 
-        @Field("mobile_no") String mobile
+                @Field("mobile") String mobile,
+                @Field("password") String password
+        );
 
-);
+        //match.php
+        @POST("match.php")
+        @FormUrlEncoded
+        Call<MatchArray> matcharray(
+
+                @Field("mobile_no") String mobile
+
+        );
     }
 }
