@@ -127,3 +127,12 @@ data class matcharray(
     val meducation: String,
     val name: String
 )
+
+
+data class Image_array(
+    val detail: List<Detailss>
+)
+
+data class Detailss(
+    val msg: String
+)
