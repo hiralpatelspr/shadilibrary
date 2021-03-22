@@ -3,6 +3,9 @@ package com.sparrow.shadilibrary;
 import android.content.Context;
 import android.util.Log;
 
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
 import java.util.List;
 
 import retrofit2.Call;
@@ -11,7 +14,7 @@ import retrofit2.Response;
 
 public class Matcher_Api {
 
-    public static void match(final Context context, String mobile, final List<match_array> matchList){
+    public static void match(final Context context, String mobile, final List<match_array> matchList, final RecyclerView rec){
 
         WebService.getClient().matcharray(mobile).enqueue(new Callback<MatchArray>() {
             @Override
@@ -29,6 +32,11 @@ public class Matcher_Api {
                     matchList.add(matchlist_array);
 
                     Log.d("TAG", "onResponse: "+matchList);
+
+                    rec.setLayoutManager(new LinearLayoutManager(context));
+                    Log.d("TAG", "onCreate: "+matchList);
+//                    adapter = new MyRecyclerViewAdapter(context, matchList);
+//                    rec.setAdapter(adapter);
                 }
 
 
