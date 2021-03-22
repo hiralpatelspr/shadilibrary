@@ -11,13 +11,13 @@ import retrofit2.Response;
 
 public class Matcher_Api {
 
-    public static void match(final Context context, String mobile, final List<matcharray> matchList){
+    public static void match(final Context context, String mobile, final List<match_array> matchList){
 
         WebService.getClient().matcharray(mobile).enqueue(new Callback<MatchArray>() {
             @Override
             public void onResponse(Call<MatchArray> call, Response<MatchArray> response) {
                 for (int i = 0; i<response.body().getDetail().size();i++){
-                    matcharray matchlist_array = new matcharray(response.body().getDetail().get(i).getDetail_bio(),
+                    match_array matchlist_array = new match_array(response.body().getDetail().get(i).getDetail_bio(),
                             response.body().getDetail().get(i).getGender(),
                             response.body().getDetail().get(i).getId(),
                             response.body().getDetail().get(i).getLike_activite(),

@@ -113,10 +113,10 @@ data class Login(
 )
 
 data class MatchArray(
-    val detail: List<matcharray>
+    val detail: List<match_array>
 )
 
-data class matcharray(
+data class match_array(
     val detail_bio: String,
     val gender: String,
     val id: String,
